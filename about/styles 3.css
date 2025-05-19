@@ -1,0 +1,253 @@
+
+
+/* Mode terang (default) */
+body {
+  background: linear-gradient(255deg, #ffa88e, transparent 30%), 
+    linear-gradient(330deg, rgb(168, 189, 123), transparent 30%), 
+    linear-gradient(225deg, #fff0be, #fbdce7, #e2fae1, #9ebfec);
+
+  color: black;
+  font-family: sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif; /* Menentukan font default */
+  margin: 0; /* Menghilangkan margin default */
+  padding: 0; /* Menghilangkan padding default */
+  height: 200vh; /* Pastikan halaman mengisi seluruh tinggi layar */
+  display: flex; /* Menggunakan Flex untuk tata letak */
+  justify-content: center; /* Vertikal center */
+  align-items: center; /* Horizontal center */
+  min-height: 100vh;
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+
+}
+
+/* Mode gelap */
+body.dark-mode {
+  background: #383838;
+  color: white;
+}
+
+/* Slider switch */
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+.h1 {
+    display: flex; /* Menggunakan Flex untuk tata letak */
+    justify-content: center; /* Vertikal center */
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 0;
+    font-size: 100px;
+    padding: 0.4em;
+    text-shadow: 0 0 0.1em #d72879, 0 0 0.3em #d72879; 0 0 0.5em #d72879; 0 0 0.9em #d72879;/*menambahkan efek bayangan pada tuisan judul*/
+
+}
+
+.header {
+    display: flex;
+    position:sticky;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: top;
+    text-shadow: 0 0 0.1em #FFF, 0 0 0.2em #FFF, 0 0 0.5em #9fc5f8, 0 0 0.7em #89abd9, 0 0 0.7em #89abd9, 0 0 0.8em #a1c8fd, 0 0 0.9em #88a4c9, 0 0 1.0em #88a4c9, 0 0 1.1em #88a4c9, 0 0 2.0em #88a4c9;/*menambahkan efek bayangan pada tuisan judul*/
+    margin-top: 1px; /* Menambah jarak di header */
+    color: #FFF;
+}
+
+
+.Logo {
+    width: 96px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.group-container {
+    display: flex;
+    flex-direction: column; /* Setiap grup ditampilkan vertikal */
+    gap: 30px; /* Jarak antar grup */
+    width: 100%; /* Mengatur lebar container untuk memenuhi ruang yang ada */
+}
+
+.group {
+    display: flex; /* Tampilkan elemen dalam grup secara horizontal */
+    gap: 20px; /* Jarak antar profil dalam grup */
+    justify-content: center; /* Pusatkan setiap grup */
+    flex-wrap: wrap; /* Jika terlalu panjang, profil akan turun ke baris berikutnya */
+}
+
+.teacher {
+    display: flex; /* Tampilkan elemen dalam grup secara horizontal */
+    gap: 20px; /* Jarak antar profil dalam grup */
+    justify-content: center; /* Pusatkan setiap grup */
+}
+
+.teacher-photo {
+    padding: 0px; /* Menghilangkan padding default */
+    width: 760px; /* Lebar profil tetap */
+    height: 380px;
+    border-radius: 20px; /* Membuat sudut menjadi melengkung */
+    background-color: #FFFFFF; /* Warna latar belakang profil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan halus di profil */
+    transition: transform 0.3s ease-in-out; /* Efek transisi saat profil diperbesar atau diperkecil */
+    margin-top: 2px; /* Memberikan jarak atas pada profil */
+    box-shadow: 0 8px 6px rgba(2, 0, 0, 0.2), /* Efek bayangan lebih besar */
+                0 0 40px rgba(0, 0, 0, 0); //* Efek cahaya putih yang lembut*/
+    backdrop-filter: blur(8px); /* Efek blur di belakang profil */
+    display: flex;
+    flex-direction: column; /* Menyusun elemen di dalam container secara vertikal */
+    align-items: justify; /* Memastikan elemen sejajar rata kanan kiri secara horizontal */
+    text-align: justify;
+}
+
+body.dark-mode .teacher-photo{
+    background: #383838;
+    color: white;
+    box-shadow: 0 0 15px 3px #95b5df;
+}
+/* Gaya gambar profil */
+.teacher-photo img {
+    width: 100%; /* Gambar menyesuaikan lebar profil */
+    height: 250px; /* Ukuran tetap untuk gambar */
+    object-fit: cover; /* Menjaga agar gambar tidak terdistorsi dan tetap proporsional */
+    border-radius top: 20px; /* Untuk efek sudut melengkung */
+    margin-bottom: 0px; /* Memberikan jarak bawah pada gambar */
+    border-top-left-radius: 20px; /* Melengkung hanya di bagian atas */
+    border-top-right-radius: 20px; /* Melengkung hanya di bagian atas */
+}
+
+.teacher-photo h3 {
+    font-size: 20px;
+    max-width: 720px; /* lebar maksimar teks */
+    margin: 20px 0 10px; /* Memberikan margin atas dan bawah */
+    text-align: justify;
+    padding-left: 25px;
+
+}
+.teacher-photo p {
+    max-width: 710px; /* lebar maksimar teks */
+    margin: 5px 0 5px; /* Memberikan margin atas dan bawah */
+    padding-left: 25px; /* Mengatur spasi di sebelah kiri */
+}
+
+
+
+/* Light Mode di dalam box profile */
+.profile {
+    padding: 0px; /* Menghilangkan padding default */
+    width: 240px; /* Lebar profil tetap */
+    height: 300px;
+    border-radius: 20px; /* Membuat sudut menjadi melengkung */
+    background-color: #FFFFFF; /* Warna latar belakang profil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan halus di profil */
+    text-align: justify; /* Menyusun teks di tengah */
+    transition: transform 0.3s ease-in-out; /* Efek transisi saat profil diperbesar atau diperkecil */
+    margin-top: 2px; /* Memberikan jarak atas pada profil */
+    box-shadow: 0 8px 6px rgba(2, 0, 0, 0.2), /* Efek bayangan lebih besar */
+                0 0 40px rgba(0, 0, 0, 0); //* Efek cahaya putih yang lembut*/
+    backdrop-filter: blur(8px); /* Efek blur di belakang profil */
+    display: flex;
+    flex-direction: column; /* Menyusun elemen di dalam container secara vertikal */
+    align-items: center; /* Memastikan elemen sejajar di tengah secara horizontal */
+}
+
+
+
+/* Dark Mode di dalam box profile */
+body.dark-mode .profile{ 
+    background: #383838;
+    color: white;
+    box-shadow: 0 0 15px 3px #95b5df;
+}
+
+/* Gaya gambar profil */
+.profile img {
+    width: 100%; /* Gambar menyesuaikan lebar profil */
+    height: 150px; /* Ukuran tetap untuk gambar */
+    object-fit: cover; /* Menjaga agar gambar tidak terdistorsi dan tetap proporsional */
+    border-radius top: 20px; /* Untuk efek sudut melengkung */
+    margin-bottom: 15px; /* Memberikan jarak bawah pada gambar */
+    border-top-left-radius: 20px; /* Melengkung hanya di bagian atas */
+    border-top-right-radius: 20px; /* Melengkung hanya di bagian atas */
+    text-align: center; /* Menyusun gambar di tengah */
+}
+
+.profile .centered {
+    text-align: center;
+}
+
+.profile .justified {
+    text-align: left;
+}
+
+/* Nama Siswa*/
+.profile h3 {
+    font-size: 16px;
+    max-width: 220px; /* lebar maksimar teks */
+    margin: 3px 0 10px; /* Memberikan margin atas dan bawah */
+}
+
+/* Quotes */
+.profile p {
+    font-size: 11px; /* Ukuran font*/
+    max-width: 210px; /* lebar maksimar teks */
+    text-align: justify; /* Menyusun teks rata kanan kiri */
+    margin: 3px auto;
+}
+
+/* Mengubah tata letak untuk responsif di perangkat kecil */
+@media (max-width: 768px) {
+    .group-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di perangkat kecil */
+         justify-items: center; /* Tetap di tengah */
+    }
+}
+
+@media (max-width: 480px) {
+    .group-container {
+        grid-template-columns: 1fr; /* 1 kolom di perangkat sangat kecil */
+        justify-items: center; /* Tetap di tengah */
+    }
+
