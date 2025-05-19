@@ -1,0 +1,212 @@
+/*Mengatur ukuran pada box bagian terluar halaman*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Mengatur keseluruhan elemen yang ada pada body halaman*/
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  background: linear-gradient(-45deg,  #1d198a, #2e66c7, #00b8a9, #00d4ff,  #a0f7ec, #fff);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  color: #333333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/*untuk transisi background gradiennya agar gerak*/
+@keyframes gradient { 
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*Mengatur bentuk fisik box section*/ 
+.section {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #f4f7fa;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+/*Mengatur background body halaman utamaketika tombol darkmode ditekan*/ 
+body.dark-mode {
+  background: linear-gradient(-45deg, #121212, #1e1e1e, #2a2a2a, #3a3a3a, #4b4b4b, #5c5c5c);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  color: white;
+  transition: background 0.4s;
+}
+
+/*Mengatur background container section ketika tombol darkmode ditekan*/
+body.dark-mode .section{
+  background: #1E1E1E;
+  transition: background 0.4s;
+}
+
+/*Mengatur background header ketika tombol darkmode ditekan*/
+body.dark-mode header{
+  background: linear-gradient(180deg, #1e1e1e, #2a2a2a);
+  transition: background 0.4s;
+}
+
+/*Mengatur background footerketika tombol darkmode ditekan*/
+body.dark-mode footer{
+  background: linear-gradient(180deg, #1e1e1e, #2a2a2a);
+  transition: background 0.4s;
+}
+
+/*Mengatur warna button Cybersecurity bila tampilan dalam darkmode*/
+body.dark-mode nav button:nth-child(1){
+  background-color: #615c24;
+  color: #decb5d;
+}
+
+/*Mengatur warna button UU Cybersecurity bila tampilan dalam darkmode*/
+body.dark-mode nav button:nth-child(2){
+  background-color: #856544;
+  color: #473309;
+}
+
+/*Mengatur warna button Jenis Serangan Cyber bila tampilan dalam darkmode*/
+body.dark-mode nav button:nth-child(3){
+  background-color: #8f4949;
+  color: #c79191;
+}
+
+/*Mengatur warna button darkmode & light mode bila tampilan dalam darkmode*/
+body.dark-mode nav button:nth-child(4){
+  background-color: #4b4b4b;
+  color: white;
+}
+
+/*Mengatur bentuk fisik header pada setiap halamannya*/
+header {
+  background: #1d198a;
+  background: linear-gradient(180deg,rgba(29, 25, 138, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/*Mengatur posisi logo Santa Laurensia Suvarna Sutera*/
+.logo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/*Mengatur bentuk gambar logo Santa Laurensia Suvarna Sutera*/
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+/*Mengatur font judul pada halaman*/
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/*Mengatur posisi button navigation*/
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/*Memberi bentuk fisik pada button navigation*/
+nav button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/*Memberi warna pada button Cybersecurity*/
+nav button:nth-child(1) {
+  background-color: #FFF8AD; /* kuning pastel */
+  color: #C4A700;
+}
+
+/*Memberi warna pada button UU Cybersecurity*/
+nav button:nth-child(2) {
+  background-color: #C2AF9B; /* coklat muda */
+  color: #4F3500;
+}
+/*Memberi warna pada button Jenis Serangan Cyber*/
+nav button:nth-child(3) {
+  background-color: #EEAEAE; /* merah muda */
+  color: #750000;
+}
+
+/*Memberi efek pada button ketika ingin ditekan*/
+nav button:hover {
+  transform: scale(1.05);
+}
+
+/*Mengatur posisi dan ukuran container pada halaman*/
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/*Mengatur proses munculnya section yang dipilih*/
+.section.active {
+  display: block;
+}
+
+/*Mengatur warna dan posisi teks subjudul*/
+h2 {
+  color: #0061C9;
+  margin-bottom: 1rem;
+}
+
+/*Mengatur posisi poin-poin pada isi konten*/
+ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/*Mengatur bentuk fisik dan posisi tulisan pada bagian bawah halam (footer)*/ 
+footer {
+  text-align: center;
+  background: #1d198a;
+  background: linear-gradient(180deg,rgba(29, 25, 138, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+/*Mengatur ukuran lebar dari button navigation*/ 
+@media (max-width: 600px) {
+  nav button {
+    width: 90%;
+  }
+}

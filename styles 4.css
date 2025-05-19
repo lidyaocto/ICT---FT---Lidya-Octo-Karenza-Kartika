@@ -1,0 +1,98 @@
+/* untuk tampilan konten utama di halaman web */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; /
+}
+/* untuk mengontrol animasi gradien yang diinginkan */
+@keyframes gradient {
+    0% {
+        background-position: 0% 51%;
+    }
+    50% {
+        background-position: 100% 51%;
+    }
+    100% {
+        background-position: 0% 51%;
+    }
+}
+/* untuk tampilan kotak photobooth */
+.container {
+  text-shadow: white 0 0 20px;
+  text-align: center;
+  padding: 20px;
+  margin: 40px;
+  border: 8px;
+  background: rgba(0, 167, 159, 0.2);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+/* untuk mengatur ukuran dan border mengambil foto */
+video {
+  border: 2px solid;
+  border-radius: 20px;
+  width: 640px;
+  height: 480px;
+}
+/* untuk mengatur ukuran dan posisi logo */
+.Logo {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 39%;
+}
+/* untuk mengatur jarak dari elemen lainnya */
+.controls {
+  margin-top: 10px;
+}
+/* untuk mengatur ukuran, posisi, dan border */
+.controls input {
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  border: 2px;
+  text-align: center;
+  border-radius: 20px;
+}
+/* untuk mengatur warna dan tampilan button */
+.controls button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px;
+  height: 40px;
+  border-radius: 20px;
+  background: #AFE1AF;
+}
+/* untuk membungkus elemen dan juga posisi foto */
+#photos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+/* untuk posisi foto */
+.photo {
+  margin: 10px;
+  position: relative;
+}
+/* untuk tampilan hasil foto */
+.photo img {
+  width: 160px;
+  height: 120px;
+  border: 3px solid #333;
+  border-radius: 20px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+/* untuk tampilan button */
+.photo button {
+  position: absolute;
+  bottom: 5px;
+  left: 20%;
+  padding: 5px;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 10px;
+  border: 2px solid;
+}
