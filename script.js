@@ -9,7 +9,7 @@ Swal.fire({ /* Foto kelompok*/
   confirmButtonText:"Tutup"
 });
 
-function cybersecurity(){ /*Arahkan ke halaman cybersecurity*/
+function cybersecurity(){ /Arahkan ke halaman cybersecurity/
 Swal.fire({
   title: "Menuju halaman Cybersecurity",
   text: "Anda akan diarahkan ke halaman Cybersecurity",
@@ -19,7 +19,7 @@ Swal.fire({
 
 }
 
-function photobooth(){ /*Arahkan ke halaman photobooth*/
+function photobooth(){ /Arahkan ke halaman photobooth/
 Swal.fire({
   title: "Menuju halaman Photobooth",
   text: "Anda akan diarahkan ke halaman Photobooth",
@@ -29,7 +29,7 @@ Swal.fire({
 
 }
 
-function about(){ /*Arahkan ke halaman About*/
+function about(){ /Arahkan ke halaman About/
 Swal.fire({
   title: "Menuju halaman About",
   text: "Anda akan diarahkan ke halaman About",
