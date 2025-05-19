@@ -58,4 +58,4 @@ context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
       photoDiv.appendChild(downloadBtn);
       photosContainer.appendChild(photoDiv);
-     }
+}
