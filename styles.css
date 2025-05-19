@@ -9,12 +9,12 @@ body{
     justify-content: center;
     background: linear-gradient(-45deg, #085078, #1d6a88, #58b4af, #85d8ce);
     background-size: 400% 400%; /* memperbesar ukuran backgorund*/
-    animation: gradient 10s ease infinite; /agar gradien background ada animasinya/
+    animation: gradient 10s ease infinite; /*agar gradien background ada animasinya*/
     transition: background 0.4s;
     font-family: 'Segoe UI', sans-serif;
 }
 
-@keyframes gradient { /untuk transisi background gradiennya agar gerak/
+@keyframes gradient { /*untuk transisi background gradiennya agar gerak*/
   0% {
     background-position: 0% 50%;
   }
@@ -27,8 +27,8 @@ body{
 }
 
 .container{
-    background: white; /warna bg container/
-    color: #424242; /warna teks pada container/
+    background: white; /*warna bg container*/
+    color: #424242; /*warna teks pada container*/
     width: 70%;
     max-width: 450px;
     height: 350px;
@@ -57,7 +57,7 @@ body{
     background-color: #0f5ca8;
     cursor: pointer;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05); /memperbesar skala ukuran button ketika dihover/
+    transform: scale(1.05); /*memperbesar skala ukuran button ketika dihover*/
 }
 
 img{
@@ -111,17 +111,17 @@ h1{
   width: 20px;
   left: 3px;
   bottom: 2px;
-  background-color: white; /warna thumbslider/
-  border-radius: 50%; /agar thumbslider berbentuk bulat/
+  background-color: white; /*warna thumbslider*/
+  border-radius: 50%; /*agar thumbslider berbentuk bulat*/
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #fec801; /warna background ketika slider diaktifkan/
+  background-color: #fec801; /*warna background ketika slider diaktifkan*/
 }
 
 input:checked + .slider:before { 
-  transform: translateX(25px); /menentukan posisi x  jika diaktifkan/
+  transform: translateX(25px); /*menentukan posisi x  jika diaktifkan*/
 }
 
 .darkmodetext{
@@ -146,5 +146,7 @@ body.dark-mode .container button{
 }
 
 body.dark-mode .container button:hover{
-    background-color: #007bff;
+    background-color: #007bff;
 }
+
+
