@@ -22,5 +22,5 @@ if (localStorage.getItem('theme') === 'dark') {
 darkModeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   const isDark = body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
